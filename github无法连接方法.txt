@@ -1,0 +1,15 @@
+# 生成 SSH 密钥并添加到 GitHub
+ssh-keygen -t ed25519 -C "1471427006@qq.com.com"
+cat ~/.ssh/id_ed25519.pub   # 将内容粘贴到 GitHub SSH Keys 设置中
+
+形如:ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFOrQho39lH2wm0Sc9Uga3GbKGdSiEN6FEPPVky7zyXo
+
+# 修改仓库远程 URL 为 SSH 格式
+git remote set-url origin git@github.com:HumHumMonster/MinJiang.git
+
+# 清除代理设置
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+# 尝试无代理推送（依赖 VPN 的全局流量接管）
+git push origin main

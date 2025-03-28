@@ -1,0 +1,13 @@
+# 忽略 data/1_预处理/A 下的所有内容
+data/1_预处理/A/
+# 忽略 data/1_预处理/train 下的所有内容
+data/1_预处理/train/
+# 忽略 data/2_特征/A 下的所有内容
+data/2_特征/A/
+# 忽略 data/2_特征/train 下的所有内容
+data/2_特征/train/
+
+A榜/test/A-雨量水位*.csv
+A榜/train/A-雨量水位*.csv
+*.csv
+*.png
